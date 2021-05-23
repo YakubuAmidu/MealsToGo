@@ -4,7 +4,7 @@ export const fonts = {
   monospace: "Oswald_400Regular",
 };
 
-export const fontWeight = {
+export const fontWeights = {
   regular: 400,
   medium: 500,
   bold: 700,
