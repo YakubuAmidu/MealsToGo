@@ -1,6 +1,4 @@
 import React from "react";
-import { View } from "react-native";
-import { DefaultTheme } from "react-native-paper";
 import styled from "styled-components";
 
 const TopSmall = styled.View`
@@ -27,7 +25,7 @@ const LeftLarge = styled.View`
   margin-left: 16px;
 `;
 
-export const spacer = ({ variant }) => {
+export const Spacer = ({ variant }) => {
   if (variant === "top.small") {
     return <TopSmall />;
   }
