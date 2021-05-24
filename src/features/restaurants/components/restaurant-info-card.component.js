@@ -74,15 +74,16 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
           </Rating>
           <SectionEnd>
             {isClosedTemporarily && (
+              // eslint-disable-next-line react-native/no-inline-styles
               <Text variant="label" style={{ color: "red" }}>
                 CLOSED TEMPORARILY
               </Text>
             )}
             {/* eslint-disable-next-line react-native/no-inline-styles */}
-            <View style={{ paddingLeft: 16 }} />
+            <View style={{ marginLeft: 16 }} />
             {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             {/* eslint-disable-next-line react-native/no-inline-styles */}
-            <View style={{ paddingLeft: 16 }} />
+            <View style={{ marginLeft: 16 }} />
             {/* eslint-disable-next-line react-native/no-inline-styles */}
             <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
           </SectionEnd>
