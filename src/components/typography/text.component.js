@@ -32,9 +32,17 @@ const label = (theme) => `
  font-weight: ${theme.fontWeights.medium};
 `;
 
+const variants = {
+  body,
+  label,
+  caption,
+  error,
+  hint,
+};
+
 export const Text = styled.Text`
   ${({ theme }) => defaultTexStyles(theme)}
-  ${({ variant, theme }) => variant[variant](theme)}
+  ${({ variant, theme }) => variants[variant](theme)}
 `;
 
 Text.defaultProps = {
