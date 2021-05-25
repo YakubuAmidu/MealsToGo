@@ -12,3 +12,11 @@ const defaultTexStyles = (theme) => `
 const body = (theme) => `
  font-size: ${theme.fontSizes.body}
 `;
+
+const hint = (theme) => `
+ font-size: ${theme.fontSizes.body};
+`;
+
+const error = (theme) => `
+ color: ${theme.colors.text.error}
+`;
