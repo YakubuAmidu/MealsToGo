@@ -80,13 +80,13 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
                 CLOSED TEMPORARILY
               </Text>
             )}
-            {/* eslint-disable-next-line react-native/no-inline-styles */}
-            <Spacer variant="left.large" />
-            {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
-            {/* eslint-disable-next-line react-native/no-inline-styles */}
-            <Spacer variant="left.large" />
-            {/* eslint-disable-next-line react-native/no-inline-styles */}
-            <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+            <Spacer position="left" size="large">
+              {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
+            </Spacer>
+            <Spacer position="left" size="large">
+              {/* eslint-disable-next-line react-native/no-inline-styles */}
+              <Image style={{ width: 15, height: 15 }} source={{ uri: icon }} />
+            </Spacer>
           </SectionEnd>
         </Section>
         <Address>{address}</Address>
