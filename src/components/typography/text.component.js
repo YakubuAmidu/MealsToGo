@@ -18,5 +18,25 @@ const hint = (theme) => `
 `;
 
 const error = (theme) => `
- color: ${theme.colors.text.error}
+ color: ${theme.colors.text.error};
 `;
+
+const caption = (theme) => `
+  font-size: ${theme.fontSizes.caption};
+  font-weight: ${theme.fontWeights.bold};
+`;
+
+const label = (theme) => `
+ font-family: ${theme.fonts.heading};
+ font-size: ${theme.fontSizes.body};
+ font-weight: ${theme.fontWeights.medium};
+`;
+
+export const Text = styled.Text`
+  ${({ theme }) => defaultTexStyles(theme)}
+  ${({ variant, theme }) => variant[variant](theme)}
+`;
+
+Text.defaultProps = {
+  variant: "body",
+};
