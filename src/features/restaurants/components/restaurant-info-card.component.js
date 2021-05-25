@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components/native";
 import { SvgXml } from "react-native-svg";
 
 import { Spacer } from "../../../components/spacer/spacer.component";
@@ -40,20 +39,18 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Text variant="label">{name}</Text>
         <Section>
           <Rating>
-            {ratingArray.map(() => (
+            {ratingArray.map((id) => (
               <SvgXml xml={star} width={20} height={20} />
             ))}
           </Rating>
           <SectionEnd>
             {isClosedTemporarily && (
-              // eslint-disable-next-line react-native/no-inline-styles
               <Text variant="error">CLOSED TEMPORARILY</Text>
             )}
             <Spacer position="left" size="large">
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
             <Spacer position="left" size="large">
-              {/* eslint-disable-next-line react-native/no-inline-styles */}
               <Icon source={{ uri: icon }} />
             </Spacer>
           </SectionEnd>
