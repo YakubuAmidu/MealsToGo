@@ -4,7 +4,7 @@ import { StatusBar, FlatList, SafeAreaView } from "react-native";
 import styled from "styled-components/native";
 
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
-import { RestaurantCard } from "../components/restaurant-info-card.styles";
+//import { RestaurantCard } from "../components/restaurant-info-card.styles";
 import { Spacer } from "../../../components/spacer/spacer.component";
 
 const SafeArea = styled(SafeAreaView)`
