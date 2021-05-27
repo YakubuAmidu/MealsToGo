@@ -10,4 +10,10 @@ export const restaurantsRequest = (location = "37.7749295,-122.4194155") => {
     }
   });
 };
-restaurantsRequest();
+restaurantsRequest()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log("error");
+  });

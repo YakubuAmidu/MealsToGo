@@ -7,14 +7,14 @@ import star from "../../../../assets/star";
 import open from "../../../../assets/open";
 
 import {
-  Icon,
   RestaurantCard,
   RestaurantCardCover,
-  Address,
   Info,
-  Rating,
   Section,
   SectionEnd,
+  Rating,
+  Icon,
+  Address,
 } from "./restaurant-info-card.styles";
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
@@ -39,7 +39,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Text variant="label">{name}</Text>
         <Section>
           <Rating>
-            {ratingArray.map((id) => (
+            {ratingArray.map(() => (
               <SvgXml xml={star} width={20} height={20} />
             ))}
           </Rating>
