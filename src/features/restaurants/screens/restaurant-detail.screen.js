@@ -22,7 +22,7 @@ export const RestaurantDetailScreen = ({ route }) => {
         onPress={() => setBreakFastExpanded(!breakFastExpanded)}
       >
         <List.Item title="Eggs Benedict" />
-        <List.Item title="Classic breakfast" />
+        <List.Item title="Classic Breakfast" />
       </List.Accordion>
 
       <List.Accordion
@@ -42,9 +42,9 @@ export const RestaurantDetailScreen = ({ route }) => {
         expanded={dinnerExpanded}
         onPress={() => setDinnerExpanded(!dinnerExpanded)}
       >
-        <List.Item title="" />
-        <List.Item title="" />
-        <List.Item title="" />
+        <List.Item title="Spaghetti Bolognese" />
+        <List.Item title="Vel Cutlet with chicken and Mushrooms" />
+        <List.Item title="Steak Fries" />
       </List.Accordion>
 
       <List.Accordion
@@ -53,8 +53,10 @@ export const RestaurantDetailScreen = ({ route }) => {
         expanded={drinksExpanded}
         onPress={() => setDrinksExpanded(!drinksExpanded)}
       >
-        <List.Item title="" />
-        <List.Item title="" />
+        <List.Item title="Coffee" />
+        <List.Item title="Tea" />
+        <List.Item title="Coke" />
+        <List.Item title="Fanta" />
       </List.Accordion>
     </SafeArea>
   );
