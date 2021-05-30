@@ -21,6 +21,18 @@ export const RestaurantDetailScreen = ({ route }) => {
         expanded={breakFastExpanded}
         onPress={() => setBreakFastExpanded(!breakFastExpanded)}
       />
+      <List.Accordion
+        title="Lunch"
+        left={(props) => <List.Icon {...props} icon="hamburger" />}
+        expanded={lunchExpanded}
+        onPress={() => setLunchExpanded(!lunchExpanded)}
+      />
+      <List.Accordion
+        title="Dinner"
+        left={(props) => <List.Icon {...props} icon="food-variant" />}
+        expanded={dinnerExpanded}
+        onPress={() => setDinnerExpanded(!dinnerExpanded)}
+      />
     </SafeArea>
   );
 };
