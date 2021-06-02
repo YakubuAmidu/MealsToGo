@@ -11,7 +11,6 @@ import {
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
-import { NavigationContainer } from "@react-navigation/native";
 
 export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -42,9 +41,9 @@ export const LoginScreen = ({ navigation }) => {
           />
         </Spacer>
         {error && (
-          <Spacer size="large">
+          <ErrorContainer size="large">
             <Text variant="error">{error}</Text>
-          </Spacer>
+          </ErrorContainer>
         )}
         <Spacer size="large">
           <AuthButton
