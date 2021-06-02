@@ -9,7 +9,7 @@ import {
   AuthButton,
 } from "../components/account.styles";
 
-export const AccountScreen = () => {
+export const AccountScreen = ({ navigation }) => {
   return (
     <AccountBackground>
       <AccountCover />
@@ -17,7 +17,7 @@ export const AccountScreen = () => {
         <AuthButton
           icon="lock-open-outline"
           mode="contained"
-          onPress={() => console.log("Pressed")}
+          onPress={() => navigation.navigate("Login")}
         >
           Login
         </AuthButton>
@@ -25,7 +25,7 @@ export const AccountScreen = () => {
           <AuthButton
             icon="lock-open-outline"
             mode="contained"
-            onPress={() => console.log("Pressed")}
+            onPress={() => navigation.navigate("Register")}
           >
             Register
           </AuthButton>
