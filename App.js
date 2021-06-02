@@ -25,14 +25,16 @@ var firebaseConfig = {
   appId: "1:392731059120:web:8231f82e7936d4747dac75",
 };
 
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   useEffect(() => {
     firebase
       .auth()
-      .signInWithEmailAndPassword("email", "password")
+      .signInWithEmailAndPassword("email@yakubu.io", "password")
       .then((user) => {
         console.log(user);
         setIsAuthenticated(true);
