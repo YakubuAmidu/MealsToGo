@@ -16,7 +16,7 @@ import { AuthenticationContext } from "../../../services/authentication/authenti
 export const RegisterScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [repeatedPasswore, setRepeatedPassword] = useState("");
+  const [repeatedPassword, setRepeatedPassword] = useState("");
   const { onRegister, error } = useContext(AuthenticationContext);
   return (
     <AccountBackground>
@@ -31,7 +31,46 @@ export const RegisterScreen = ({ navigation }) => {
           autoCapitalize="none"
           onChangeText={(u) => setEmail(u)}
         />
+        <Spacer size="large">
+          <AuthInput
+            label="Password"
+            value={password}
+            textContentType="password"
+            secureTextEntry
+            autoCapitalize="none"
+            onChangeText={(p) => setPassword(p)}
+          />
+        </Spacer>
+        <Spacer size="large">
+          <AuthInput
+            label="Repeated-password"
+            value={repeatedPassword}
+            textContentType="password"
+            secureTextEntry
+            autoCapitalize="none"
+            onChangeText={(rp) => setRepeatedPassword(rp)}
+          />
+        </Spacer>
+        {error && (
+          <ErrorContainer size="large">
+            <Text variant="error">{error}</Text>
+          </ErrorContainer>
+        )}
+        <Spacer size="large">
+          <AuthButton
+            icon="lock-open-outline"
+            mode="contained"
+            onPress={() => onRegister(email, password, repeatedPassword)}
+          >
+            Login
+          </AuthButton>
+        </Spacer>
       </AccountContainer>
+      <Spacer size="large">
+        <AuthButton mode="contained" onPress={() => navigation.goBack()}>
+          Back
+        </AuthButton>
+      </Spacer>
     </AccountBackground>
   );
 };
