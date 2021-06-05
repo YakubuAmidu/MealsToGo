@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Camera } from "expo-camera";
 import styled from "styled-components/native";
+import { View } from "react-native";
+import { Text } from "../../../components/typography/text.component";
 
 const ProfileCamera = styled(Camera)`
   width: 100%;
@@ -8,7 +10,21 @@ const ProfileCamera = styled(Camera)`
 `;
 
 export const CameraScreen = () => {
+  const [hasPermission, setHasPermission] = useState(null);
   const cameraRef = useRef();
+  useEffect(() => {
+    (async () => {
+      const { status } = await Camera.requestPermissionsAsync();
+      setHasPermission(status === "granted");
+    })();
+  }, []);
+
+  if (hasPermission === null) {
+    return <View />;
+  }
+  if (hasPermission === false) {
+    return <Text>No Access to camera</Text>;
+  }
 
   return (
     <ProfileCamera
