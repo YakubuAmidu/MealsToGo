@@ -11,8 +11,7 @@ import { AuthenticationContext } from "../../../services/authentication/authenti
 const SettingsItem = styled(List.Item)`
   padding: ${(props) => props.theme.space[3]};
 `;
-
-const AvatorContainer = styled.View`
+const AvatarContainer = styled.View`
   align-items: center;
 `;
 
@@ -20,12 +19,13 @@ export const SettingsScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);
   return (
     <SafeArea>
-      <AvatorContainer>
+      <AvatarContainer>
         <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
         <Spacer position="top" size="large">
           <Text variant="label">{user.email}</Text>
         </Spacer>
-      </AvatorContainer>
+      </AvatarContainer>
+
       <List.Section>
         <SettingsItem
           title="Favourites"
