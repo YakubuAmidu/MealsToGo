@@ -12,6 +12,7 @@ const ProfileCamera = styled(Camera)`
 export const CameraScreen = () => {
   const [hasPermission, setHasPermission] = useState(null);
   const cameraRef = useRef();
+
   useEffect(() => {
     (async () => {
       const { status } = await Camera.requestPermissionsAsync();
@@ -23,15 +24,12 @@ export const CameraScreen = () => {
     return <View />;
   }
   if (hasPermission === false) {
-    return <Text>No Access to camera</Text>;
+    return <Text>No access to camera</Text>;
   }
-
   return (
     <ProfileCamera
       ref={(camera) => (cameraRef.current = camera)}
       type={Camera.Constants.Type.front}
-    >
-      j
-    </ProfileCamera>
+    />
   );
 };
