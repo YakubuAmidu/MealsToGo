@@ -15,12 +15,7 @@ import { Navigation } from "./src/infrastructure/navigation";
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBJv-3jxaSEO0xqmXhP8o5F0Uop_B5LJo8",
-  authDomain: "mealstogo-9550a.firebaseapp.com",
-  projectId: "mealstogo-9550a",
-  storageBucket: "mealstogo-9550a.appspot.com",
-  messagingSenderId: "392731059120",
-  appId: "1:392731059120:web:8231f82e7936d4747dac75",
+  //
 };
 
 if (!firebase.apps.length) {
